@@ -6,9 +6,9 @@ import retrofit2.http.QueryMap
 
 interface MarvelApi {
 
-    @GET("characters")
+    @GET("characters") //aqui vai o endPoint depois do baseUrl
     suspend fun getCharacters(
-        @QueryMap
+        @QueryMap //faz o mapeamento do gson jogando para a classe DataWrapperResponse
         queries: Map<String, String>
     ): DataWrapperResponse
 
