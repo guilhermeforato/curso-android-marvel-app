@@ -8,7 +8,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.marvelapp.R
 import com.example.marvelapp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint // essa anotacao faz com que todos os fragmentos vinculados a main activity possam pegar dependencias do hilt
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
